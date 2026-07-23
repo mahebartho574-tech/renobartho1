@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rénobartho - Entreprise de Construction & Rénovation à Esneux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BARRE DE NAVIGATION -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Rénobartho Logo" class="site-logo">
+        </div>
+        <div class="nav-contact">
+            <a href="tel:0495824154" class="btn-phone">📞 0495 82 41 54</a>
+        </div>
+    </nav>
+
+    <!-- BANNIÈRE D'ACCUEIL (HERO) -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Pour tous vos travaux de <br><span class="highlight">Rénovation & Construction</span></h1>
+            <p>Un travail soigné et un suivi personnalisé pour tous vos projets à Esneux et en Wallonie.</p>
+            <div class="hero-buttons">
+                <a href="tel:0495824154" class="btn btn-primary">Appeler maintenant</a>
+                <a href="#contact" class="btn btn-secondary">Nous contacter</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION ENGAGEMENT -->
+    <section class="features">
+        <div class="feature-card">
+            <div class="icon">🏗️</div>
+            <h3>Savoir-faire Pro</h3>
+            <p>Une expertise complète pour tous vos travaux de construction et de rénovation.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📍</div>
+            <h3>Région d'Esneux</h3>
+            <p>Intervention rapide à Esneux, en Province de Liège et dans toute la Wallonie.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🤝</div>
+            <h3>Accompagnement</h3>
+            <p>Un suivi personnalisé et à l'écoute de vos besoins tout au long du projet.</p>
+        </div>
+    </section>
+
+    <!-- SECTION SERVICES -->
+    <section class="services" id="services">
+        <h2>Nos Prestations</h2>
+        <div class="services-grid">
+            <div class="service-box">
+                <h3>🔨 Rénovation Globale</h3>
+                <p>Remise en état complète de maisons, appartements et pièces de vie.</p>
+            </div>
+            <div class="service-box">
+                <h3>🧱 Maçonnerie & Gros Œuvre</h3>
+                <p>Modifications de structures, ouvertures de murs, terrasses et aménagement.</p>
+            </div>
+            <div class="service-box">
+                <h3>🏠 Aménagements Extérieurs</h3>
+                <p>Travaux de finition, façades et abords de votre propriété.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION GALERIE PHOTOS (VISUELLE SEULEMENT) -->
+    <section class="portfolio-section" id="realisations">
+        <h2>Nos Réalisations</h2>
+        <p class="section-subtitle">Aperçu de nos chantiers rénovés avec soin.</p>
+        
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <img src="images/chantier1.jpg" alt="Chantier Rénobartho 1">
+            </div>
+
+            <div class="portfolio-card">
+                <img src="images/chantier2.jpg" alt="Chantier Rénobartho 2">
+            </div>
+
+            <div class="portfolio-card">
+                <img src="images/chantier3.jpg" alt="Chantier Rénobartho 3">
+            </div>
+
+            <div class="portfolio-card">
+                <img src="images/chantier4.jpg" alt="Chantier Rénobartho 4">
+            </div>
+
+            <div class="portfolio-card">
+                <img src="images/chantier5.jpg" alt="Chantier Rénobartho 5">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION AVIS CLIENTS INTERACTIF -->
+    <section class="reviews-section" id="avis">
+        <h2>Laissez votre avis</h2>
+        <p class="section-subtitle">Votre opinion compte pour nous ! Partagez votre expérience.</p>
+        
+        <div class="review-form-container">
+            <form class="review-form" id="reviewForm" onsubmit="submitReview(event)">
+                <div class="form-group">
+                    <label>Votre note :</label>
+                    <div class="star-rating">
+                        <input type="radio" id="star5" name="rating" value="5" required />
+                        <label for="star5" title="5 étoiles">★</label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 étoiles">★</label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 étoiles">★</label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 étoiles">★</label>
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 étoile">★</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="authorName">Votre nom / Prénom :</label>
+                    <input type="text" id="authorName" placeholder="Ex: Marc D." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reviewComment">Votre commentaire :</label>
+                    <textarea id="reviewComment" rows="4" placeholder="Racontez comment s'est passé votre chantier..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-submit">Publier mon avis</button>
+            </form>
+            
+            <p id="successMessage" class="success-message" style="display: none;">
+                ✅ Merci ! Votre avis a bien été enregistré.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION CONTACT -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contactez-nous</h2>
+                <p>Une question ou un projet de rénovation en vue ? N'hésitez pas à nous joindre directement :</p>
+                
+                <div class="info-item">
+                    <span>📍 <strong>Adresse :</strong> Esneux, Wallonie, Belgique</span>
+                </div>
+                <div class="info-item">
+                    <span>📞 <strong>Téléphone :</strong> <a href="tel:0495824154">0495 82 41 54</a></span>
+                </div>
+                <div class="info-item">
+                    <span>✉️ <strong>Email :</strong> <a href="mailto:reno.bartho@gmail.com">reno.bartho@gmail.com</a></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIED DE PAGE -->
+    <footer>
+        <p>&copy; 2026 Rénobartho - Entreprise de Construction. Tous droits réservés.</p>
+    </footer>
+
+    <!-- SCRIPT GESTION DU FORMULAIRE D'AVIS -->
+    <script>
+        function submitReview(event) {
+            event.preventDefault();
+            document.getElementById('reviewForm').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
